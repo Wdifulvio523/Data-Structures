@@ -53,7 +53,32 @@ class BinarySearchTree:
       # if current value is less than the target 
       else:
         current = current.right
-
+  
+  def contains_class(self, target):
+      # search BST for given target value, returning a boolean
+      # check if target value matches self.value on the current node
+        # if so, return True
+      if self == target:
+        return True
+      # compare the target value against self.value
+        # if target < self.value
+      if target < self.value:
+          # if self.left exists
+          if self.left:
+            # call the left child's contain method, passing in target val
+            self.left.contains(target)
+          # else return false
+          else:
+            return False 
+        # if target > self.value
+      if target > self.value:
+          # if self.right exists
+          if self.right:
+            # call the right child's contain method, passing in target val
+            self.right.contains(target)
+          # else return false
+          else:
+            return False
 
   def get_max(self):
     current = self
