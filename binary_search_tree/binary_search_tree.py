@@ -66,7 +66,7 @@ class BinarySearchTree:
           # if self.left exists
           if self.left:
             # call the left child's contain method, passing in target val
-            self.left.contains(target)
+            self.left.contains_class(target)
           # else return false
           else:
             return False 
@@ -75,7 +75,7 @@ class BinarySearchTree:
           # if self.right exists
           if self.right:
             # call the right child's contain method, passing in target val
-            self.right.contains(target)
+            self.right.contains_class(target)
           # else return false
           else:
             return False
